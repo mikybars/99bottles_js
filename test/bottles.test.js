@@ -1,14 +1,6 @@
-import { Bottles } from '../lib/bottles';
+import { Bottles, BottleVerse } from '../lib/bottles';
 
 describe('Bottles', () => {
-  test('the first verse', () => {
-    const expected =
-      `99 bottles of beer on the wall, 99 bottles of beer.
-Take one down and pass it around, 98 bottles of beer on the wall.
-`;
-    expect(new Bottles().verse(99)).toBe(expected);
-  });
-
   test('another verse', () => {
     const expected =
       `89 bottles of beer on the wall, 89 bottles of beer.
@@ -370,4 +362,15 @@ Go to the store and buy some more, 99 bottles of beer on the wall.
 `;
     expect(new Bottles().song()).toBe(expected);
   });
+});
+
+describe('BottleVerse', () => {
+  test('the first verse', () => {
+    const expected =
+      `99 bottles of beer on the wall, 99 bottles of beer.
+Take one down and pass it around, 98 bottles of beer on the wall.
+`;
+    expect(BottleVerse.lyrics(99)).toBe(expected);
+  });
+
 });
