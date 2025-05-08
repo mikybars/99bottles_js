@@ -10,6 +10,10 @@ export default [
 
       '@stylistic/js/indent': ['error', 2],
       '@stylistic/js/lines-between-class-members': ['warn', 'always'],
+      "@stylistic/js/padding-line-between-statements": [
+        "error",
+        { "blankLine": "always", "prev": "class", "next": "*" }
+      ],
       '@stylistic/js/no-multiple-empty-lines': ['warn', { 'max': 1 }],
       '@stylistic/js/padded-blocks': ['warn', { 'classes': 'never' }],
       '@stylistic/js/max-len': ['error', { 'code': 130 }],
