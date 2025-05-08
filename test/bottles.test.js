@@ -343,10 +343,10 @@ Take one down and pass it around, 98 bottles of beer on the wall.
 
   test('another verse', () => {
     const expected =
-      `89 bottles of beer on the wall, 89 bottles of beer.
-Take one down and pass it around, 88 bottles of beer on the wall.
+      `3 bottles of beer on the wall, 3 bottles of beer.
+Take one down and pass it around, 2 bottles of beer on the wall.
 `;
-    expect(BottleVerse.lyrics(89)).toBe(expected);
+    expect(BottleVerse.lyrics(3)).toBe(expected);
   });
 
   test('verse 2', () => {
