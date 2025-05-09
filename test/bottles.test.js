@@ -12,6 +12,10 @@ class VerseFake {
   }
 }
 
+describe('VerseFake', () => {
+  testPlaysVerseRole(VerseFake);
+});
+
 describe('CountdownSong', () => {
   test('verse', () => {
     const expected = 'This is verse 500.\n';
