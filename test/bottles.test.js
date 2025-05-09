@@ -1,15 +1,20 @@
 import { BottleVerse, CountdownSong } from '../lib/bottles';
 
+class VerseFake {
+  static lyrics(number) {
+    return `This is verse ${number}.\n`;
+  }
+}
+
 describe('CountdownSong', () => {
   test('a couple verses', () => {
     const expected =
-      `99 bottles of beer on the wall, 99 bottles of beer.
-Take one down and pass it around, 98 bottles of beer on the wall.
-
-98 bottles of beer on the wall, 98 bottles of beer.
-Take one down and pass it around, 97 bottles of beer on the wall.
-`;
-    expect(new CountdownSong().verses(99, 98)).toBe(expected);
+      'This is verse 99.\n' +
+      '\n' +
+      'This is verse 98.\n' +
+      '\n' +
+      'This is verse 97.\n';
+    expect(new CountdownSong(VerseFake).verses(99, 97)).toBe(expected);
   });
 
   test('a few verses', () => {
