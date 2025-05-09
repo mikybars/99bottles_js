@@ -1,5 +1,11 @@
 import { BottleVerse, CountdownSong } from '../lib/bottles';
 
+const testPlaysVerseRole = rolePlayer => {
+  test('plays verse role', () => {
+    expect(rolePlayer).toHaveProperty('lyrics', expect.any(Function));
+  });
+};
+
 class VerseFake {
   static lyrics(number) {
     return `This is verse ${number}.\n`;
@@ -38,6 +44,8 @@ describe('CountdownSong', () => {
 });
 
 describe('BottleVerse', () => {
+  testPlaysVerseRole(BottleVerse);
+
   test('verse general rule upper bound', () => {
     const expected =
       `99 bottles of beer on the wall, 99 bottles of beer.
